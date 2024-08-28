@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-primario: #EFF1FA;
+    --color-secundario: white;
+    --color-terciario: #0A3871;
+    --color-cuaternario: #D8DFE8;
+
+    --fuente-krona: 'Krona One', sans-serif;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-inter: "Inter", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-inter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*background-color: #f0f0f0;*/
+    background-color: var(--color-primario);
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    height: 70vh;
+    /*background-color: #fff;*/
+    background-color: var(--color-secundario);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.left, .right {
+    flex: 1;
+    padding: 20px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+    border: 2px solid var(--color-primario);
+    border-radius: 4px;
+    resize: none;
+    font-size: 2rem;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--color-terciario);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 30%;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--color-primario);
+}
+
+.left-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+textarea#resultText {
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+    border: 2px solid var(--color-primario);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+/* Consulta para tablets */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left, .right {
+        flex: none;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .left-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .left textarea {
+        height: 50%;
+    }
+}
+
+/* Consulta para teléfonos móviles */
+@media (max-width: 480px) {
+    .left textarea, .right textarea#resultText {
+        height: 40%;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

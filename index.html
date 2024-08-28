@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Verifica que el archivo CSS esté correctamente vinculado -->
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de Textos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <textarea id="inputText" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="left-buttons">
+                <button onclick="encryptText()">Encriptar</button>
+            <button onclick="decryptText()">Desencriptar</button>
+            </div>
+            
+        </div>
+        <div class="right" id="rightContent">
+            <img src="./assets/muneco.png" alt="muneco mirando un diamante" id="image">
+            <h3 id="title">Ningún mensaje fue encontrado</h3>
+            <p id="description">Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+    </div>
+    <!-- Coloca el script justo antes de cerrar el body -->
+    <script src="app.js"></script>
+</body>
+</html>
